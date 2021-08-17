@@ -8,6 +8,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="app-container">
+      <div id="app-header">
+        <div id="app-title">
+          <h2>To-Do Application</h2>
+        </div>
+        <div id="input-container">
+          <form action="">
+            <input type="text" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <div id="app-body">
+        <div id="added-task">
+          <h2>Added Task</h2>
+          <ul id="added-task-list">
+            <li>
+              <input type="checkbox" />
+              <label>Task One</label>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <label>Task Two</label>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <label>Task Three</label>
+            </li>
+          </ul>
+        </div>
+
+        <div id="completed-task">
+          <h2>Completed Task</h2>
+          <ul id="completed-task-list">
+            <li>
+              <label>Task Four</label>
+              <button class="delete">Delete</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

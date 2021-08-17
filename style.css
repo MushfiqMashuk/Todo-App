@@ -1,0 +1,57 @@
+#app-container {
+    background-color: aqua;
+    height: 600px;
+    width: 800px;
+    margin: 30px auto;
+    
+}
+
+#app-header {
+    position: absolute;
+    margin: 50px 265px;
+    text-align: center;
+}
+
+#app-body {
+    background-color: antiquewhite;
+    height: 400px;
+    width: inherit;
+    position: absolute;
+    top: 250px;
+}
+
+#added-task {
+    float: left;
+    position: absolute;
+    left: 40px;
+}
+
+#completed-task {
+    float: left;
+    position: absolute;
+    right: 40px;
+}
+
+.delete {
+    background-color: brown;
+    color: white;
+    border: 0px;
+    padding: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-family: Monaco;
+    font-size: 15px;
+}
+
+li{
+    list-style: none;
+    padding: 3px ;
+}
+ul{
+    padding-left: 0px;
+}
+h2 {
+    border: 2px dotted rgb(27, 17, 27);
+    padding: 3px;
+    font-family: Monaco;
+}
