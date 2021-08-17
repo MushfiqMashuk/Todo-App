@@ -3,7 +3,6 @@
     height: 600px;
     width: 800px;
     margin: 30px auto;
-    
 }
 
 #app-header {
@@ -21,15 +20,17 @@
 }
 
 #added-task {
-    float: left;
     position: absolute;
     left: 40px;
+    border: solid 2px rgb(182, 181, 185);
+    padding: 30px;
 }
 
 #completed-task {
-    float: left;
     position: absolute;
     right: 40px;
+    border: solid 2px rgb(182, 181, 185);
+    padding: 30px;
 }
 
 .delete {
@@ -38,7 +39,7 @@
     border: 0px;
     padding: 4px;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 10px;
     font-family: Monaco;
     font-size: 15px;
 }
