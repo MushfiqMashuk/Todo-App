@@ -21,24 +21,24 @@ window.onload = function (event) {
         totalTask.forEach(task => {
             createTask(task);
         });
+    } else {
+        totalTask = [];
     }
 };
 
 const addTask = function(event) {
     event.preventDefault();
 
-    if(input.value && input.value !== ""){
+    if(input.value && input.value !== "" && input.value !== " "){
         
         createTask(input.value);
-        //totalTask.push(input.value);
-        localStorage.setItem('task', input.value);
-
+        totalTask.push(input.value);
+        localStorage.setItem('task', totalTask);
         input.value = "";
-    
         console.log(localStorage);
 
     } else {
-        alert("Please something to your To-Do");
+        alert("Please write something to your To-Do");
     }
 
 }
@@ -61,6 +61,7 @@ const createTask = function (task) {
 
 const completeTask = function (event) {
     const checkBox = event.target;
+    const label = checkBox.nextElementSibling;
     const listItem = checkBox.parentNode;
     const button = document.createElement('button');
 
@@ -71,6 +72,9 @@ const completeTask = function (event) {
     checkBox.remove();
 
     button.onclick = deleteTask;
+
+    totalTask.pop(label.innerText);
+    localStorage.setItem('task', totalTask);
 
     completedTaskList.appendChild(listItem);
 
