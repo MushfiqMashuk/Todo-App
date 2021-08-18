@@ -1,8 +1,11 @@
 #app-container {
-    background-color: aqua;
-    height: 600px;
-    width: 800px;
+    background: rgba(7, 49, 49, 0.808);
+    max-width: 800px;
     margin: 30px auto;
+    overflow: hidden;
+    border: 2px solid rgb(68, 65, 65);
+    border-radius: 5px;
+    padding: 15px;
 }
 
 #app-header {
@@ -11,26 +14,34 @@
     text-align: center;
 }
 
-#app-body {
-    background-color: antiquewhite;
-    height: 400px;
-    width: inherit;
-    position: absolute;
-    top: 250px;
-}
-
 #added-task {
-    position: absolute;
-    left: 40px;
-    border: solid 2px rgb(182, 181, 185);
-    padding: 30px;
+    float: left;
+    width: 40%;
 }
 
 #completed-task {
-    position: absolute;
-    right: 40px;
-    border: solid 2px rgb(182, 181, 185);
-    padding: 30px;
+    float: right;
+    width: 48%;
+}
+
+#add-task {
+    background-color: rgb(6, 129, 68);
+    color: white;
+    border: 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: Monaco;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.box {
+  padding: 10px 15px;
+  border: 2px solid #b1c9bb;
+  border-radius: 5px;
+  background: rgba(235, 233, 233, 0.842);
+  margin: 15px 0;
 }
 
 .delete {
@@ -44,17 +55,26 @@
     font-size: 15px;
 }
 
+.form-container {
+    text-align: center;
+    font-family: Monaco;
+}
+
 li{
     list-style: none;
     padding: 3px ;
+    border-bottom: 1px dotted #b1c9bb;
+    font-family: Monaco;
 }
 ul{
     padding-left: 0px;
 }
 h2 {
-    border: 2px dotted rgb(27, 17, 27);
     padding: 3px;
     font-family: Monaco;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5px 0px;
 }
 
 label {

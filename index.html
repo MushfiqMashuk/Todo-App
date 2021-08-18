@@ -8,48 +8,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app-container">
-      <div id="app-header">
-        <div id="app-title">
-          <h2>To-Do Application</h2>
-        </div>
-        <div id="input-container">
-          <form>
-            <input type="text" />
-            <input type="submit" value="Add Task" />
-          </form>
-        </div>
+    <section id="app-container">
+
+      <h2 style="color: antiquewhite;">To-Do Application</h2>
+
+      <form class="box form-container">
+        <label for="input">Add New Task Here</label>
+        <input type="text" id="input" />
+        <input type="submit" id="add-task" value="Add Task" />
+      </form>
+
+      <div id="added-task" class="box">
+        <h2>Added Task</h2>
+        <ul id="added-task-list">
+          <li><input type="checkbox" /><label>Task One</label></li>
+          <li><input type="checkbox" /><label>Task Two</label></li>
+          <li><input type="checkbox" /><label>Task Three</label></li>
+        </ul>
+
+        <br style="clear: both" />
       </div>
 
-      <div id="app-body">
-        <div id="added-task">
-          <h2>Added Task</h2>
-          <ul id="added-task-list">
-            <li>
-              <input type="checkbox" /><label>Task One</label>
-            </li>
-            <li>
-              <input type="checkbox" /><label>Task Two</label>
-            </li>
-            <li>
-              <input type="checkbox" /><label>Task Three</label>
-            </li>
-          </ul>
-
-          <br style="clear: both;">
-        </div>
-
-        <div id="completed-task">
-          <h2>Completed Task</h2>
-          <ul id="completed-task-list">
-            <li>
-              <label>Task Four</label><button class="delete">Delete</button>
-            </li>
-          </ul>
-          <br style="clear: both;">
-        </div>
+      <div id="completed-task" class="box">
+        <h2>Completed Task</h2>
+        <ul id="completed-task-list">
+          <li>
+            <label>Task Four</label><button class="delete">Delete</button>
+          </li>
+        </ul>
+        <br style="clear: both" />
       </div>
-    </div>
+    </section>
 
     <script src="app.js"></script>
   </body>

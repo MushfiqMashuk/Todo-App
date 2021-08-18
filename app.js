@@ -10,6 +10,19 @@ const form = document.querySelector('form');
 const input = document.querySelector('input[type="text"]');
 const addedTaskList = document.querySelector('#added-task-list');
 const completedTaskList = document.querySelector('#completed-task-list');
+let totalTask = [];
+
+window.onload = function (event) {
+
+    totalTask = localStorage.getItem('task');
+    
+    if(totalTask && totalTask.length > 0){
+        totalTask = totalTask.split(',');
+        totalTask.forEach(task => {
+            createTask(task);
+        });
+    }
+};
 
 const addTask = function(event) {
     event.preventDefault();
@@ -17,6 +30,12 @@ const addTask = function(event) {
     if(input.value && input.value !== ""){
         
         createTask(input.value);
+        //totalTask.push(input.value);
+        localStorage.setItem('task', input.value);
+
+        input.value = "";
+    
+        console.log(localStorage);
 
     } else {
         alert("Please something to your To-Do");
@@ -36,7 +55,6 @@ const createTask = function (task) {
     listItem.appendChild(label);
 
     addedTaskList.appendChild(listItem);
-    input.value = "";
 
     checkBox.onchange = completeTask;
 };
